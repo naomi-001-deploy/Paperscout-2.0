@@ -4,3 +4,5 @@ httpx>=0.27,<0.28
 openpyxl>=3.1,<4.0
 openai>=1.40,<2.0
 httpx[socks]
+tenacity>=9.0,<10.0
+pydantic>=2.8,<3.0
