@@ -18,5 +18,9 @@
 
 Workspace-Daten werden lokal unter `.paperscout/workspaces.json` gespeichert.
 
+Streamlit Cloud Entrypoint:
+- bevorzugt `src/paperscout/ui.py`
+- alternativ `ui.py` (Bootstrap für Cloud-Deploys)
+
 ## Produkt-Iteration
 - Iterativer Ausbaupfad dokumentiert in `PRODUCT_ITERATIONS.md`
