@@ -14,8 +14,15 @@ from typing import Iterable
 import pandas as pd
 import streamlit as st
 
-from .pipeline import dedup_by_doi
-from .sources.crossref_strict import fetch_from_crossref_strict
+try:
+    from .pipeline import dedup_by_doi
+    from .sources.crossref_strict import fetch_from_crossref_strict
+except ImportError:
+    src_root = Path(__file__).resolve().parents[1]
+    if str(src_root) not in sys.path:
+        sys.path.insert(0, str(src_root))
+    from paperscout.pipeline import dedup_by_doi
+    from paperscout.sources.crossref_strict import fetch_from_crossref_strict
 
 
 DEFAULT_JOURNALS = [
